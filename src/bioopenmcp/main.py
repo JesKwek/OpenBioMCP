@@ -1,6 +1,6 @@
 # server.py
 from mcp.server.fastmcp import FastMCP
-from modules.fastqc import register_fastqc_tools
+from bioopenmcp.modules.fastqc import register_fastqc_tools
 
 import subprocess
 import shutil
@@ -18,5 +18,8 @@ def get_greeting(name: str) -> str:
 # Register all FastQC tools
 register_fastqc_tools(mcp)
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == "__main__":
+    main()

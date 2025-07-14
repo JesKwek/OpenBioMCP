@@ -1,13 +1,15 @@
 [project]
-name = "BioOpenMCP"
+name = "bioopenmcp"
 version = "0.1.0"
-description = "Add your description here"
+description = "BioOpenMCP: Model Context Protocol tools and CLI for bioinformatics workflows."
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.8"
 dependencies = [
     "mcp[cli]>=1.10.1",
-    # Add any other dependencies here
 ]
 
+[project.scripts]
+bioopenmcp = "bioopenmcp.main:main"
+
 [tool.setuptools.packages.find]
-where = ["BioOpenMCP", "modules"]
+where = ["src"]

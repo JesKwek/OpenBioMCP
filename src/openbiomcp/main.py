@@ -1,23 +1,23 @@
 # server.py
 from mcp.server.fastmcp import FastMCP
-from bioopenmcp.modules.fastqc import register_fastqc_tools
-from bioopenmcp.modules.cutadapt import register_cutadapt_tools
-from bioopenmcp.modules.trim_galore import register_trim_galore_tools
-from bioopenmcp.modules.star_alignment import register_star_alignment_tools
-from bioopenmcp.modules.multiqc import register_multiqc_tools
+from openbiomcp.modules.fastqc import register_fastqc_tools
+from openbiomcp.modules.cutadapt import register_cutadapt_tools
+from openbiomcp.modules.trim_galore import register_trim_galore_tools
+from openbiomcp.modules.star_alignment import register_star_alignment_tools
+from openbiomcp.modules.multiqc import register_multiqc_tools
 
 import subprocess
 import shutil
 import os
 
 # Create an MCP server
-mcp = FastMCP("BioOpenMCP")
+mcp = FastMCP("OpenBioMCP")
 
 # Add a dynamic greeting resource
 @mcp.resource("greeting://{name}")
 def get_greeting(name: str) -> str:
     """Get a personalized greeting"""
-    return f"Hello, {name}! This is an BioOpenMCP server."
+    return f"Hello, {name}! This is an OpenBioMCP server."
 
 # Register all FastQC tools
 register_fastqc_tools(mcp)

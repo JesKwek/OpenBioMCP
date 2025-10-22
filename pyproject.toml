@@ -1,6 +1,6 @@
 [project]
-name = "bioopenmcp"
-version = "0.1.0"
+name = "openbiomcp"
+version = "0.1.1"
 description = "BioOpenMCP: Model Context Protocol tools and CLI for bioinformatics workflows."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -9,7 +9,7 @@ dependencies = [
 ]
 
 [project.scripts]
-bioopenmcp = "bioopenmcp.main:main"
+openbiomcp = "openbiomcp.main:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
